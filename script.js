@@ -29,14 +29,12 @@ function openModal(photoId) {
 }
 
 function closeModal() {
-    const modal = document.getElementById("modal");
-    modal.style.display = "none";
+    document.getElementById("modal").style.display = "none";
 }
 
 // Controle de áudio
 const audioPlayer = document.getElementById("audio-player");
 const playPauseButton = document.getElementById("play-pause");
-const restartButton = document.getElementById("restart");
 const volumeControl = document.getElementById("volume-control");
 const volumeValue = document.getElementById("volume-value");
 
@@ -59,7 +57,7 @@ function restartAudio() {
 }
 
 // Detectar a tecla "5" e reiniciar a música
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", (event) => {
     if (event.key === "5") {
         restartAudio();
     }
@@ -73,3 +71,12 @@ function changeVolume(value) {
 
 // Inicializar volume no máximo
 audioPlayer.volume = 1;
+
+// Inicializar contador
+updateCounter();
+
+// Tocar música automaticamente ao carregar a página
+window.addEventListener('load', () => {
+    audioPlayer.play();
+    playPauseButton.innerHTML = "⏸ Pausar";
+});
