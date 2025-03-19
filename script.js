@@ -23,7 +23,6 @@ function updateCounter() {
     // Data de início
     const startDate = new Date("2024-05-30T00:00:00");
 
-    // Função para calcular a diferença de tempo
     const now = new Date();
     const diff = now - startDate;
 
