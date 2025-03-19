@@ -20,22 +20,23 @@ function closeModal() {
 
 // Função para atualizar o contador de tempo
 function updateCounter() {
-    var startDate = new Date("May 30, 2023 00:00:00"); // Data de início
-    var now = new Date();
-    var diff = now - startDate;
+    // Data de início
+    const startDate = new Date("2024-05-30T00:00:00");
 
-    // Calculando a diferença em dias, horas, minutos e segundos
-    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    // Função para calcular a diferença de tempo
+    const now = new Date();
+    const diff = now - startDate;
 
-    // Exibindo o tempo no formato desejado
-    document.getElementById("days").innerText = `Dias: ${days}`;
-    document.getElementById("time").innerText = `Tempo: ${hours}h ${minutes}m ${seconds}s`;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById('days').innerHTML = `Você está junto há ${days} dias`;
+    document.getElementById('time').innerHTML = `${hours} horas, ${minutes} minutos, e ${seconds} segundos`;
 }
 
-// Atualizando o contador a cada segundo
+// Atualiza o contador a cada segundo
 setInterval(updateCounter, 1000);
 
 // Inicia o contador ao carregar a página
