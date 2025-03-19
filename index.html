@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Amor Sem Fim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Um Amor Sem Fim</h1>
+        <p>Juntos desde 30 de Maio de 2023</p>
+        <!-- Contador -->
+        <div id="counter">
+            <h2>Tempo juntos:</h2>
+            <p id="days"></p>
+            <p id="time"></p>
+        </div>
+    </header>
+
+    <section id="photos">
+        <!-- Foto 1 -->
+        <div class="photo" id="photo1">
+            <img src="images/photo1.jpg.jpeg" alt="Foto 1" onclick="openModal('photo1')">
+            <p class="photo-text">Esse foi o nosso primeiro encontro, foi nesse dia que eu tive a certeza que ia te amar para sempre</p>
+        </div>
+
+        <!-- Foto 2 -->
+        <div class="photo" id="photo2">
+            <img src="images/photo2.jpg.jpeg" alt="Foto 2" onclick="openModal('photo2')">
+            <p class="photo-text">Nesse dia vc foi me ver no trabalho, fiquei em choque por que não acreditava que vc iria </p>
+        </div>
+
+        <!-- Foto 3 -->
+        <div class="photo" id="photo3">
+            <img src="images/photo3.jpg.jpeg" alt="Foto 3" onclick="openModal('photo3')">
+            <p class="photo-text">Nesse dia você foi pra casa de vó e a gente ficou a tarde toda conversando, rindo um do outro criando intimidades e conexão </p>
+        </div>
+
+        <!-- Foto 4 -->
+        <div class="photo" id="photo4">
+            <img src="images/photo4.jpg.jpeg" alt="Foto 4" onclick="openModal('photo4')">
+            <p class="photo-text">Esse dia é muito especial, pois era um dia depois do seu aniversário e eu consegui te levar para assistir Divertidamente 2, e dava pra ver a felicidade transbordando em você </p>
+        </div>
+
+        <!-- Foto 5 -->
+        <div class="photo" id="photo5">
+            <img src="images/photo5.jpg.jpeg" alt="Foto 5" onclick="openModal('photo5')">
+            <p class="photo-text">O grande dia que te pedi em namoro, a maior decisão da minha vida e a mais certa, tava muito nervoso nesse dia e tava com medo de você não aceitar</p>
+        </div>
+
+        <!-- Foto 6 -->
+        <div class="photo" id="photo6">
+            <img src="images/photo6.jpg.jpeg" alt="Foto 6" onclick="openModal('photo6')">
+            <p class="photo-text">Esse a gente estava comemorando um mês de namoro, te levei para jantar no Cactos, uma noite incrível ao seu lado</p>
+        </div>
+
+        <!-- Foto 7 -->
+        <div class="photo" id="photo7">
+            <img src="images/photo7.jpg.jpeg" alt="Foto 7" onclick="openModal('photo7')">
+            <p class="photo-text">Coloquei porque você estava muito linda e quero te mostrar isso</p>
+        </div>
+
+        <!-- Foto 8 -->
+        <div class="photo" id="photo8">
+            <img src="images/photo8.jpg.jpeg" alt="Foto 8" onclick="openModal('photo8')">
+            <p class="photo-text">Nossa primeira vez na praia, foi do nada, mas a gente aproveitou muito e foi surreal realizar o nosso sonho</p>
+        </div>
+
+        <!-- Foto 9 -->
+        <div class="photo" id="photo9">
+            <img src="images/photo9.jpg.jpeg" alt="Foto 9" onclick="openModal('photo9')">
+            <p class="photo-text">Eu te disse que ia te levar para serra, foi muito bom lá </p>
+        </div>
+
+        <!-- Foto 10 -->
+        <div class="photo" id="photo10">
+            <img src="images/photo10.jpg.jpeg" alt="Foto 10" onclick="openModal('photo10')">
+            <p class="photo-text">Nosso primeiro Natal juntos, teve uma desentendida, mas foi muito bom, que todos os natais sejam ao seu lado</p>
+        </div>
+
+        <!-- Foto 11 -->
+        <div class="photo" id="photo11">
+            <img src="images/photo11.jpg.jpeg" alt="Foto 11" onclick="openModal('photo11')">
+           <p class="photo-text">A gente foi para o balneário para passar o aniversário da mãe, tava sem acreditar que você foi</p>
+        </div>
+
+        <!-- Foto 12 -->
+        <div class="photo" id="photo12">
+            <img src="images/photo12.jpg.jpeg" alt="Foto 12" onclick="openModal('photo12')">
+            <p class="photo-text">A nossa segunda vez na praia, agora para passar o dia, a gente brigou, mas foi incrível, eu amei conhecer o lugar que você nasceu e foi criada</p>
+        </div>
+
+        <!-- Foto 13 -->
+        <div class="photo" id="photo13">
+            <img src="images/photo13.jpg.jpeg" alt="Foto 13" onclick="openModal('photo13')">
+            <p class="photo-text">O primeiro buquê que dei pra você, achei que você ia achar ruim porque a gente estava só 20 dias juntos, mas depois vi o quanto você ficou feliz</p>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Imagem Ampliada">
+        <p id="modal-text"></p>
+    </div>
+
+    <footer>
+        <audio autoplay loop>
+            <source src="music/um_amor_puro.mp3" type="audio/mp3">
+            Seu navegador não suporta o formato de áudio.
+        </audio>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
