@@ -85,11 +85,18 @@
             <source src="music/um_amor_puro.mp3" type="audio/mp3">
             Seu navegador não suporta o formato de áudio.
         </audio>
+    
         <div id="audio-control">
-            <button onclick="toggleAudio()">Iniciar Música</button>
+            <button id="play-pause" onclick="toggleAudio()">▶ Tocar</button>
+            <button id="restart" onclick="restartAudio()">🔄 Reiniciar</button>
+            
+            <div class="volume-container">
+                <input type="range" id="volume-control" min="0" max="1" step="0.1" onchange="changeVolume(this.value)">
+                <span id="volume-value">100%</span>
+            </div>
         </div>
     </footer>
-
+    
     <script src="script.js"></script>
 </body>
 </html>

@@ -34,14 +34,42 @@ function closeModal() {
 }
 
 // Controle de áudio
+const audioPlayer = document.getElementById("audio-player");
+const playPauseButton = document.getElementById("play-pause");
+const restartButton = document.getElementById("restart");
+const volumeControl = document.getElementById("volume-control");
+const volumeValue = document.getElementById("volume-value");
+
+// Função de tocar/pausar a música
 function toggleAudio() {
-    const audioPlayer = document.getElementById("audio-player");
     if (audioPlayer.paused) {
         audioPlayer.play();
+        playPauseButton.innerHTML = "⏸ Pausar";
     } else {
         audioPlayer.pause();
+        playPauseButton.innerHTML = "▶ Tocar";
     }
 }
 
-// Inicializar contador
-updateCounter();
+// Função para reiniciar a música
+function restartAudio() {
+    audioPlayer.currentTime = 0;
+    audioPlayer.play();
+    playPauseButton.innerHTML = "⏸ Pausar";
+}
+
+// Detectar a tecla "5" e reiniciar a música
+document.addEventListener("keydown", function(event) {
+    if (event.key === "5") {
+        restartAudio();
+    }
+});
+
+// Função para ajustar o volume
+function changeVolume(value) {
+    audioPlayer.volume = value;
+    volumeValue.innerText = `${Math.round(value * 100)}%`;
+}
+
+// Inicializar volume no máximo
+audioPlayer.volume = 1;

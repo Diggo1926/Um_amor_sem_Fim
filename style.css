@@ -115,23 +115,45 @@ h1 {
     color: #f8f8f8;
     text-decoration: none;
 }
-
+/* Estilizar o controle de música */
 #audio-control {
     text-align: center;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
+/* Estilo dos botões */
 #audio-control button {
-    padding: 12px 25px;
-    background-color: #004aad;
-    color: white;
+    padding: 10px 15px;
     border: none;
-    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
 #audio-control button:hover {
-    background-color: #003a87;
+    background-color: #005bb5;
+}
+
+/* Estilizar o controle de volume */
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#volume-control {
+    width: 100px;
+    cursor: pointer;
+}
+
+#volume-value {
+    font-weight: bold;
+    color: #007BFF;
 }
