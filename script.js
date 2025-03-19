@@ -42,10 +42,10 @@ const volumeValue = document.getElementById("volume-value");
 function toggleAudio() {
     if (audioPlayer.paused) {
         audioPlayer.play();
-        playPauseButton.innerHTML = "⏸ Pausar";
+        playPauseButton.innerHTML = '<span class="icon">⏸</span> Pausar';
     } else {
         audioPlayer.pause();
-        playPauseButton.innerHTML = "▶ Tocar";
+        playPauseButton.innerHTML = '<span class="icon">▶</span> Tocar';
     }
 }
 
@@ -53,7 +53,7 @@ function toggleAudio() {
 function restartAudio() {
     audioPlayer.currentTime = 0;
     audioPlayer.play();
-    playPauseButton.innerHTML = "⏸ Pausar";
+    playPauseButton.innerHTML = '<span class="icon">⏸</span> Pausar';
 }
 
 // Detectar a tecla "5" e reiniciar a música
@@ -78,5 +78,5 @@ updateCounter();
 // Tocar música automaticamente ao carregar a página
 window.addEventListener('load', () => {
     audioPlayer.play();
-    playPauseButton.innerHTML = "⏸ Pausar";
+    playPauseButton.innerHTML = '<span class="icon">⏸</span> Pausar';
 });
